@@ -65,6 +65,21 @@
             }
         };
 
+        /** 
+        * @description Checks if a number is a natural number
+        * @param {number} num
+        * @returns {number} The Number
+        */
+        BG.isNatural = function(num, msg) {
+            if(msg === undefined) msg = 'BG.isNatural';
+            num = this.isPositive(num, msg);
+            if (Number.isInteger(num)) {
+                return num;
+            } else {
+                throw new Error("expected a natural number in " + msg + ".");
+            }
+        };
+
         return BG;
     }
     //define globally if it doesn't already exist
