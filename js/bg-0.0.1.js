@@ -50,6 +50,21 @@
             }
         };
 
+        /** 
+        * @description Checks if a number is negative
+        * @param {number} num
+        * @returns {number} The Number
+        */
+        BG.isNegative = function(num, msg) {
+            if(msg === undefined) msg = 'BG.isNegative';
+            num = this.toNumber(num, msg);
+            if(num > 0) {
+                throw new Error("expected a negative number in " + msg + ".");
+            } else {
+                return num;
+            }
+        };
+
         return BG;
     }
     //define globally if it doesn't already exist
