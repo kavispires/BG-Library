@@ -8,8 +8,8 @@
            --------- */
 
         /** 
-        * @description Converts the value to a number, then checks if it is a number.
-        * @param {number} val
+        * @description Converts the value to a number, then checks if it is a number
+        * @param {anything} val
         * @returns {number} The number as a interger or as 0
         */
         BG.notNumber = function(val){
@@ -21,11 +21,34 @@
         };
 
         /** 
-        * @description
-        * @param {} val
-        * @returns {}
+        * @description Converts value to a number
+        * @param {number} num
+        * @returns {number} The Number as an integer
         */
+        BG.toNumber = function(num, msg) {
+            if(msg === undefined) msg = 'BG.toNumber';
+            num = Number(num);
+            if(isNaN(num)) {
+                throw new Error("expected a number in " + msg + ".");
+            } else {
+                return num;
+            }
+        };
 
+        /** 
+        * @description Checks if a number is positive
+        * @param {number} num
+        * @returns {number} The Number
+        */
+        BG.isPositive = function(num, msg) {
+            if(msg === undefined) msg = 'BG.isPositive';
+            num = this.toNumber(num, msg);
+            if(num < 0) {
+                throw new Error("expected a positive number in " + msg + ".");
+            } else {
+                return num;
+            }
+        };
 
         return BG;
     }
