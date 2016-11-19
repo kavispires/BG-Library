@@ -9,7 +9,7 @@
 
         /** 
         * @description Converts the value to a number, then checks if it is a number.
-        * @param {anything} val
+        * @param {number} val
         * @returns {number} The number as a interger or as 0
         */
         BG.notNumber = function(val){
@@ -19,6 +19,13 @@
             }
             return val;
         };
+
+        /** 
+        * @description
+        * @param {} val
+        * @returns {}
+        */
+
 
         return BG;
     }
