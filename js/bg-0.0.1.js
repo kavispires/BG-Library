@@ -120,6 +120,16 @@
             return result;
         };
 
+        /** 
+        * @description Simulates dice roll from given number of sides multiple times
+        * @param {number} sides
+        * @param {number} times
+        * @returns {number} the Sum of all dice rolls
+        */
+        BG.dX = function(sides, times) {
+            return this.diceRoll(sides, 1, times, 'BG.dX');
+        };
+
 
         return BG;
     }
