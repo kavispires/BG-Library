@@ -80,6 +80,47 @@
             }
         };
 
+        /* ---------
+           DICE ROLL
+           --------- */
+
+        /** 
+        * @description Randomly gives a number from x to Y multiple times
+        * @param {number} x
+        * @param {number} y
+        * @param {number} times
+        * @returns {number} the Sum of random numbers
+        */
+        BG.diceRoll = function(x, y, times, msg) {
+            if(msg === undefined) msg = 'BG.diceRoll';
+            if (times == undefined) {
+                times = 1;
+            } else {
+                times = BG.isNatural(times, msg);
+            }
+            if (y == undefined) {
+                y = 1;
+            } else {
+                y = BG.isNatural(y);
+            }
+            if (x == undefined) {
+                throw new Error("expected a number in " + msg + ".");
+            } else {
+                x = BG.isNatural(x);
+            }
+
+            var result = 0;
+            var arr = [x, y];
+            arr = arr.sort(); // TODO: use BG.sort
+            var roll;
+            for (var i = 1; i <= times; i++) {
+                roll = Math.floor(Math.random() * (arr[1] - arr[0] + 1) + arr[0]); 
+                result += roll;
+            }
+            return result;
+        };
+
+
         return BG;
     }
     //define globally if it doesn't already exist
