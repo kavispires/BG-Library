@@ -139,6 +139,14 @@
             return this.diceRoll(4, 1, times, 'BG.d4');
         };
 
+        /** 
+        * @description Simulates roll of a d6 die multiple times
+        * @param {number} times
+        * @returns {number} the Sum of all d6 dice rolls
+        */
+        BG.d6 = function(times) {
+            return this.diceRoll(6, 1, times, 'BG.d6');
+        };
 
         return BG;
     }
