@@ -157,6 +157,15 @@
             return this.diceRoll(8, 1, times, 'BG.d8');
         };
 
+        /** 
+        * @description Simulates roll of a d10 die multiple times
+        * @param {number} times
+        * @returns {number} the Sum of all d10 dice rolls
+        */
+        BG.d10 = function(times) {
+            return this.diceRoll(10, 1, times, 'BG.d10');
+        };
+
         return BG;
     }
     //define globally if it doesn't already exist
