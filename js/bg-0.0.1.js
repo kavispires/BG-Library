@@ -130,6 +130,15 @@
             return this.diceRoll(sides, 1, times, 'BG.dX');
         };
 
+        /** 
+        * @description Simulates roll of a d4 die multiple times
+        * @param {number} times
+        * @returns {number} the Sum of all d4 dice rolls
+        */
+        BG.d4 = function(times) {
+            return this.diceRoll(4, 1, times, 'BG.d4');
+        };
+
 
         return BG;
     }
