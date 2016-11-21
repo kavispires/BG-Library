@@ -148,6 +148,15 @@
             return this.diceRoll(6, 1, times, 'BG.d6');
         };
 
+        /** 
+        * @description Simulates roll of a d8 die multiple times
+        * @param {number} times
+        * @returns {number} the Sum of all d8 dice rolls
+        */
+        BG.d8 = function(times) {
+            return this.diceRoll(8, 1, times, 'BG.d8');
+        };
+
         return BG;
     }
     //define globally if it doesn't already exist
