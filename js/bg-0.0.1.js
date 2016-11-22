@@ -184,6 +184,15 @@
             return this.diceRoll(20, 1, times, 'BG.d20');
         };
 
+        /** 
+        * @description Simulates roll of a d100 die multiple times
+        * @param {number} times
+        * @returns {number} the Sum of all d100 dice rolls
+        */
+        BG.d100 = function(times) {
+            return this.diceRoll(100, 1, times, 'BG.d100');
+        };
+
         return BG;
     }
     //define globally if it doesn't already exist
