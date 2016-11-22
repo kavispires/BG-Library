@@ -193,6 +193,17 @@
             return this.diceRoll(100, 1, times, 'BG.d100');
         };
 
+        /** 
+        * @description Simulates roll of a variable-range die multiple times
+        * @param {number} x
+        * @param {number} y
+        * @param {number} times
+        * @returns {number} the Sum of all variable-range dice rolls
+        */
+        BG.dXY = function(x, y, times) {
+            return this.diceRoll(x, y, times, 'BG.dXY');
+        };
+
         return BG;
     }
     //define globally if it doesn't already exist
