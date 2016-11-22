@@ -175,8 +175,6 @@
             return this.diceRoll(12, 1, times, 'BG.d12');
         };
 
-        return BG;
-
         /** 
         * @description Simulates roll of a d20 die multiple times
         * @param {number} times
