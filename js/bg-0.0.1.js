@@ -176,6 +176,17 @@
         };
 
         return BG;
+
+        /** 
+        * @description Simulates roll of a d20 die multiple times
+        * @param {number} times
+        * @returns {number} the Sum of all d20 dice rolls
+        */
+        BG.d20 = function(times) {
+            return this.diceRoll(20, 1, times, 'BG.d20');
+        };
+
+        return BG;
     }
     //define globally if it doesn't already exist
     if(typeof(BG) === 'undefined'){
