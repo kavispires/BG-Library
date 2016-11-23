@@ -123,7 +123,7 @@
         /** 
         * @description Simulates dice roll from given number of sides multiple times
         * @param {number} sides
-        * @param {number} times
+        * @param {number} times (optional)
         * @returns {number} the Sum of all dice rolls
         */
         BG.dX = function(sides, times) {
@@ -132,7 +132,7 @@
 
         /** 
         * @description Simulates roll of a d4 die multiple times
-        * @param {number} times
+        * @param {number} times (optional)
         * @returns {number} the Sum of all d4 dice rolls
         */
         BG.d4 = function(times) {
@@ -141,7 +141,7 @@
 
         /** 
         * @description Simulates roll of a d6 die multiple times
-        * @param {number} times
+        * @param {number} times (optional)
         * @returns {number} the Sum of all d6 dice rolls
         */
         BG.d6 = function(times) {
@@ -150,7 +150,7 @@
 
         /** 
         * @description Simulates roll of a d8 die multiple times
-        * @param {number} times
+        * @param {number} times (optional)
         * @returns {number} the Sum of all d8 dice rolls
         */
         BG.d8 = function(times) {
@@ -159,7 +159,7 @@
 
         /** 
         * @description Simulates roll of a d10 die multiple times
-        * @param {number} times
+        * @param {number} times (optional)
         * @returns {number} the Sum of all d10 dice rolls
         */
         BG.d10 = function(times) {
@@ -168,7 +168,7 @@
 
         /** 
         * @description Simulates roll of a d12 die multiple times
-        * @param {number} times
+        * @param {number} times (optional)
         * @returns {number} the Sum of all d12 dice rolls
         */
         BG.d12 = function(times) {
@@ -177,7 +177,7 @@
 
         /** 
         * @description Simulates roll of a d20 die multiple times
-        * @param {number} times
+        * @param {number} times (optional)
         * @returns {number} the Sum of all d20 dice rolls
         */
         BG.d20 = function(times) {
@@ -186,7 +186,7 @@
 
         /** 
         * @description Simulates roll of a d100 die multiple times
-        * @param {number} times
+        * @param {number} times (optional)
         * @returns {number} the Sum of all d100 dice rolls
         */
         BG.d100 = function(times) {
@@ -195,9 +195,9 @@
 
         /** 
         * @description Simulates roll of a variable-range die multiple times
-        * @param {number} x
+        * @param {number} x (optional)
         * @param {number} y
-        * @param {number} times
+        * @param {number} times (optional)
         * @returns {number} the Sum of all variable-range dice rolls
         */
         BG.dXY = function(x, y, times) {
