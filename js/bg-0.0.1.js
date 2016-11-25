@@ -204,6 +204,37 @@
             return this.diceRoll(x, y, times, 'BG.dXY');
         };
 
+        /* ---------
+           ARRAYS
+           --------- */
+
+        /** 
+        * @description Checks if array is an array
+        * @param {number} array 
+        * @returns {number} array
+        */
+        BG.isArray = function(array, msg) {
+            if(msg === undefined) msg = 'BG.isArray';
+            if(Array.isArray(array) == false) {
+                throw new Error("expected an array in " + msg + ".");
+            } else {
+                return array;
+            }
+        };
+
+        BG.removeNumber = function(array, num, msg) {
+            if(msg === undefined) msg = 'BG.removeNumber';
+            array = this.isArray(array, msg);
+            num = this.toNumber(num, msg);
+            for (var i = 0; i < array.length; i++) {
+                if (array[i] === num) {
+                    array.splice(i, 1);
+                    i--;
+                }
+            }
+            return array;
+        };
+
         return BG;
     }
     //define globally if it doesn't already exist
