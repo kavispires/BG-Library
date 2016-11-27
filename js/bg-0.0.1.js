@@ -210,8 +210,8 @@
 
         /** 
         * @description Checks if array is an array
-        * @param {number} array 
-        * @returns {number} array
+        * @param {array} array 
+        * @returns {array} array
         */
         BG.isArray = function(array, msg) {
             if(msg === undefined) msg = 'BG.isArray';
@@ -222,6 +222,12 @@
             }
         };
 
+        /** 
+        * @description Removes specific number from array multiple times
+        * @param {array} array 
+        * @param {array} num 
+        * @returns {array} array
+        */
         BG.removeNumber = function(array, num, msg) {
             if(msg === undefined) msg = 'BG.removeNumber';
             array = this.isArray(array, msg);
@@ -233,6 +239,15 @@
                 }
             }
             return array;
+        };
+
+        /** 
+        * @description Removes all zeros from array
+        * @param {array} array 
+        * @returns {array} array
+        */
+        BG.removeZeros = function(array) {
+            return this.removeNumber(array, 0, 'BG.removeZeros');
         };
 
         return BG;
