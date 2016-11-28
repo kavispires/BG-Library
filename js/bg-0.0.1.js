@@ -250,6 +250,12 @@
             return this.removeNumber(array, 0, 'BG.removeZeros');
         };
 
+        BG.removeItem = function(array, item, msg) {
+            if(msg === undefined) msg = 'BG.removeItem';
+            //TODO
+            return array;
+        };
+
         return BG;
     }
     //define globally if it doesn't already exist
