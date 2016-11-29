@@ -250,11 +250,24 @@
             return this.removeNumber(array, 0, 'BG.removeZeros');
         };
 
+        //TO-DO
         BG.removeItem = function(array, item, msg) {
             if(msg === undefined) msg = 'BG.removeItem';
-            //TODO
+            //TO-DO
             return array;
         };
+
+        /** 
+        * @description Sorts array in ascending order
+        * @param {array} array 
+        * @returns {array} array
+        */
+        BG.sortArray = function(array) {
+            array = this.isArray(array, "BG.sortArray");
+            return array.sort(function(a,b) {
+                return a - b;
+            })
+        }
 
         return BG;
     }
