@@ -267,7 +267,19 @@
             return array.sort(function(a,b) {
                 return a - b;
             })
-        }
+        };
+
+        /** 
+        * @description Sorts array in descending order
+        * @param {array} array 
+        * @returns {array} array
+        */
+        BG.reverseArray = function(array) {
+            array = this.isArray(array, "BG.reverseArray");
+            return array.sort(function(a,b) {
+                return b - a;
+            })
+        };
 
         return BG;
     }
