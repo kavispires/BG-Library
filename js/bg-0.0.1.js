@@ -281,6 +281,14 @@
             })
         };
 
+        BG.removeDuplicates = function(array) {
+            array = this.isArray(array, "BG.removeDuplicates");
+            var unique = array.filter(function(elem, index, self) {
+                return index == self.indexOf(elem);
+            });
+            return unique;
+        }
+
         return BG;
     }
     //define globally if it doesn't already exist
