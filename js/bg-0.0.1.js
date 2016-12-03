@@ -281,6 +281,11 @@
             })
         };
 
+        /** 
+        * @description Compare elements on an array and remove any duplicates
+        * @param {array} array 
+        * @returns {array} array with unique elements only
+        */
         BG.removeDuplicates = function(array) {
             array = this.isArray(array, "BG.removeDuplicates");
             var unique = array.filter(function(elem, index, self) {
@@ -288,6 +293,27 @@
             });
             return unique;
         }
+
+        /** 
+        * @description Compare two arrays for same elements in both
+        * @param {array} array1
+        * @param {array} array2
+        * @returns {array} array with unique elements from both array
+        */
+        BG.arrayIntercession = function(array1, array2) {
+            array1 = this.isArray(array1, "BG.arrayIntercession");
+            array2 = this.isArray(array2, "BG.arrayIntercession");
+
+            var result = [];
+            array1.sort();
+            array2.sort();
+            for (var i = 0; i < array1.length; i++) {
+                if (array2.indexOf( array1[i] ) > -1){
+                    result.push( array1[i] );
+                }
+            }
+            return result;
+        };
 
         return BG;
     }
