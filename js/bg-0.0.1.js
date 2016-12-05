@@ -292,7 +292,7 @@
                 return index == self.indexOf(elem);
             });
             return unique;
-        }
+        };
 
         /** 
         * @description Compare two arrays for same elements in both
