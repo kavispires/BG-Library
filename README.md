@@ -4,4 +4,4 @@ This is a Board Game functions library that I am creating to support the board g
 
 ## Documentation
 
-_Coming soon_
+Documentation is still underconstruction and will be available [here](https://kavispires.github.io/BG-Library).
